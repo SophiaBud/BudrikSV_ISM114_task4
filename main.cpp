@@ -28,11 +28,11 @@ void GetPerimeter1(int a, int b, int c)
 	int p = a + b + c;
 	if (a <= 0 || b <= 0 || c <= 0 || a >= b + c 
 		|| b >= a + c || c >= a + b || cin.fail())
-		cerr << "Произошло исключение в функции GetPerimeter1" << endl;
+		cerr << "РџСЂРѕРёР·РѕС€Р»Рѕ РёСЃРєР»СЋС‡РµРЅРёРµ РІ С„СѓРЅРєС†РёРё GetPerimeter1" << endl;
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
@@ -45,7 +45,7 @@ void GetPerimeter2(int a, int b, int c) throw(int)
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
@@ -54,11 +54,11 @@ void GetPerimeter3(int a, int b, int c) throw(invalid_argument)
 	int p;
 	if (a <= 0 || b <= 0 || c <= 0 || a >= b + c
 		|| b >= a + c || c >= a + b || cin.fail())
-		throw invalid_argument("Треугольник не существует!");
+		throw invalid_argument("РўСЂРµСѓРіРѕР»СЊРЅРёРє РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
@@ -71,7 +71,7 @@ void GetPerimeter4_1(int a, int b, int c) throw(MyExcept1)
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
@@ -80,11 +80,11 @@ void GetPerimeter4_2(int a, int b, int c) throw(MyExcept2)
 	int p;
 	if (a <= 0 || b <= 0 || c <= 0 || a >= b + c
 		|| b >= a + c || c >= a + b || cin.fail())
-		throw MyExcept2("Треугольник не существует!");
+		throw MyExcept2("РўСЂРµСѓРіРѕР»СЊРЅРёРє РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
@@ -93,22 +93,22 @@ void GetPerimeter4_3(int a, int b, int c) throw(MyExcept3)
 	int p;
 	if (a <= 0 || b <= 0 || c <= 0 || a >= b + c
 		|| b >= a + c || c >= a + b || cin.fail())
-		throw MyExcept3("Треугольник не существует!", a, b, c);
+		throw MyExcept3("РўСЂРµСѓРіРѕР»СЊРЅРёРє РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!", a, b, c);
 	else
 	{
 		p = a + b + c;
-		cout << "Периметр треугольника: " << p;
+		cout << "РџРµСЂРёРјРµС‚СЂ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: " << p;
 	}
 }
 
 void launcher(void (*func)(int, int, int))
 {
 	int a, b, c;
-	cout << "Введите a: ";
+	cout << "Р’РІРµРґРёС‚Рµ a: ";
 	cin >> a;
-	cout << "Введите b: ";
+	cout << "Р’РІРµРґРёС‚Рµ b: ";
 	cin >> b;
-	cout << "Введите c: ";
+	cout << "Р’РІРµРґРёС‚Рµ c: ";
 	cin >> c;
 	func(a, b, c);
 	cout << endl;
@@ -125,7 +125,7 @@ int main()
 
 	catch (...)
 	{
-		cout << "Произошло исключение в функции GetPerimeter1" << endl;
+		cout << "РџСЂРѕРёР·РѕС€Р»Рѕ РёСЃРєР»СЋС‡РµРЅРёРµ РІ С„СѓРЅРєС†РёРё GetPerimeter1" << endl;
 	}
 
 	try
@@ -135,7 +135,7 @@ int main()
 
 	catch (int)
 	{
-		cout << "Произошло исключение в функции GetPerimeter2" << endl;
+		cout << "РџСЂРѕРёР·РѕС€Р»Рѕ РёСЃРєР»СЋС‡РµРЅРёРµ РІ С„СѓРЅРєС†РёРё GetPerimeter2" << endl;
 	}
 
 	try
@@ -155,7 +155,7 @@ int main()
 
 	catch (MyExcept1)
 	{
-		cout << "Произошло исключение MyExcept1 в функции GetPerimeter4_1" << endl;
+		cout << "РџСЂРѕРёР·РѕС€Р»Рѕ РёСЃРєР»СЋС‡РµРЅРёРµ MyExcept1 РІ С„СѓРЅРєС†РёРё GetPerimeter4_1" << endl;
 	}
 
 	try
